@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novedades - AcequIA</title>
+<link rel="icon" type="image/png" href="Icono Web Definito.png" /> />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .noticia {
+      border-left: 4px solid #007bff;
+      padding-left: 15px;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+    .visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AcequIA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="novedades.html">Novedades</a></li>
+          <li class="nav-item"><a class="nav-link" href="Quienes somos.html">Quiénes somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="container">
+      <h1>Últimas novedades</h1>
+      <p class="lead">Seguimiento del progreso y actividades del proyecto AcequIA</p>
+    </div>
+  </header>
+
+  <section class="container" id="noticias">
+    <div class="noticia">
+      <h4>🔧 Instalación de sensores piloto en Godoy Cruz</h4>
+      <small class="text-muted">Junio 2025</small>
+      <p>Se colocaron los primeros sensores IoT de prueba en dos tramos de acequias urbanas del departamento de Godoy Cruz. Los dispositivos registran caudal de agua y envían datos en tiempo real a una base de datos local.</p>
+    </div>
+
+    <div class="noticia">
+      <h4>🤝 Alianza con Aguas Mendocinas</h4>
+      <small class="text-muted">Julio 2025</small>
+      <p>Se firmó un acuerdo de cooperación técnica con Aguas Mendocinas para el acceso a datos históricos y validación de modelos predictivos en tramos críticos.</p>
+    </div>
+
+    <div class="noticia">
+      <h4>📊 Primera simulación exitosa del sistema AcequIA</h4>
+      <small class="text-muted">Agosto 2025</small>
+      <p>Se realizó la primera simulación digital completa con imágenes satelitales en colaboración con Google Earth, sensores simulados y predicción de alertas. La IA detectó correctamente una obstrucción hipotética en las acequias mendocinas.</p>
+    </div>
+  </section>
+
+  
+  <footer>
+    <p>© 2025 AcequIA | Proyecto educativo del IES 9-008 Manuel Belgrano</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.noticia').forEach((el) => {
+        const position = el.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+        if (position < screenPosition) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

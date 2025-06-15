@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AcequIA - Inicio</title>
+    <link rel="icon" type="image/png" href="Icono Web Definito.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+      }
+      .navbar-brand {
+        font-weight: bold;
+      }
+      .intro, .funciona {
+        padding: 40px 20px;
+        background-color: #f0f8ff;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 1s ease;
+      }
+      .visible {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+      .funciona-icon {
+        width: 64px;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease;
+      }
+      .funciona-icon:hover {
+        transform: scale(1.1);
+      }
+      footer {
+        background-color: #003366;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">AcequIA</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="novedades.html">Novedades</a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Quienes somos.html">Quiénes somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      id="carouselAcequia"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Img/acequia.jpg" class="d-block w-100" alt="Acequia Mendoza" />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Acequias urbanas en Mendoza</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="Img/DSC_3862.jpg"
+            class="d-block w-100"
+            alt="Obras hídricas"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Infraestructura hídrica provincial</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="Img/Rio Mendoza.jpg"
+            class="d-block w-100"
+            alt="Paisaje Mendoza"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Entorno natural de los recursos hídricos</h3>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselAcequia"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselAcequia"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+
+    <section class="intro text-center" id="intro">
+      <div class="container">
+        <h2>¿Qué es AcequIA?</h2>
+        <p class="lead">
+          AcequIA es un sistema innovador diseñado para monitorear el estado de
+          las acequias y prevenir inundaciones mediante inteligencia artificial,
+          sensores IoT e imágenes satelitales. Su objetivo es mejorar la gestión
+          del agua en la provincia de Mendoza.
+        </p>
+        <a href="novedades.html" class="btn btn-outline-primary mt-3"
+          >Ver novedades del proyecto</a
+        >
+      </div>
+    </section>
+
+    <section class="container py-5 funciona" id="funciona">
+      <h2 class="text-center mb-4">¿Cómo funciona AcequIA?</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2712/2712558.png"
+            alt="Sensor IoT"
+            class="funciona-icon"
+          />
+          <h5 class="mt-2">Recolección de datos</h5>
+          <p>
+            Los sensores IoT registran caudal, obstrucciones y datos del entorno
+            en tiempo real.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4228/4228716.png"
+            alt="Procesamiento IA"
+            class="funciona-icon"
+          />
+          <h5 class="mt-2">Procesamiento inteligente</h5>
+          <p>
+            La IA analiza los datos con redes neuronales y detecta riesgos como
+            bloqueos o desbordes.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/535/535239.png"
+            alt="Mapa digital"
+            class="funciona-icon"
+          />
+          <h5 class="mt-2">Mapa interactivo</h5>
+          <p>
+            Una interfaz gráfica permite visualizar alertas en un mapa en tiempo
+            real para los municipios.
+          </p>
+        </div>
+      </div>
+    </section>
+<section class="container py-5" id="comentarios">
+  <h2 class="text-center mb-4">Comentarios de los mendocinos</h2>
+
+  <div class="mb-4">
+    <div class="border rounded p-3 mb-2">
+      <strong>Sofía Martínez</strong>
+      <p>Me encanta esta iniciativa. Es hora de que Mendoza tenga un sistema así para cuidar el agua.</p>
+    </div>
+    <div class="border rounded p-3 mb-2">
+      <strong>Luis Herrera</strong>
+      <p>Felicitaciones al equipo! Ojalá llegue a implementarse a nivel provincial pronto, es una gran idea.</p>
+    </div>
+  </div>
+
+  <form>
+    <div class="mb-3">
+      <label for="nombreComentario" class="form-label">Tu nombre</label>
+      <input type="text" class="form-control" id="nombreComentario" placeholder="Ej. Camila López" required>
+    </div>
+    <div class="mb-3">
+      <label for="comentario" class="form-label">Tu comentario</label>
+      <textarea class="form-control" id="comentario" rows="3" placeholder="Dejá tu mensaje..." required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</section>
+
+
+    <footer>
+      <p>© 2025 AcequIA | Proyecto educativo del IES 9-008 Manuel Belgrano</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      
+      window.addEventListener('scroll', () => {
+        const intro = document.getElementById('intro');
+        const funciona = document.getElementById('funciona');
+        const screenPosition = window.innerHeight / 1.3;
+
+        [intro, funciona].forEach((section) => {
+          const position = section.getBoundingClientRect().top;
+          if (position < screenPosition) {
+            section.classList.add('visible');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

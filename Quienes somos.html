@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiénes somos - AcequIA</title>
+<link rel="icon" type="image/png" href="Icono Web Definito.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+    section {
+      padding: 40px 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+    .visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AcequIA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="Novedades.html">Novedades</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Quienes somos.html">Quiénes somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <h1>Quiénes somos</h1>
+      <p class="lead">Conocé al equipo detrás del proyecto AcequIA</p>
+    </div>
+  </header>
+
+  <section class="container" id="origen">
+    <h2>El origen del proyecto</h2>
+    <p>El proyecto <strong>AcequIA</strong> nace como una propuesta académica del Instituto IES 9-008 Manuel Belgrano, dentro del espacio curricular de Alfabetización y Práctica Profesional. Su objetivo es aplicar tecnologías modernas, como inteligencia artificial y sensores IoT, a una problemática real de la provincia de Mendoza: el deterioro y la falta de monitoreo de las acequias y sistemas hídricos urbanos.</p>
+
+    <p>Conscientes de la emergencia hídrica declarada desde 2010, un grupo de estudiantes decidió desarrollar una solución innovadora, viable y sostenible. Así surge AcequIA: un sistema inteligente que combina análisis predictivo, monitoreo en tiempo real y visualización interactiva para prevenir obstrucciones y optimizar el mantenimiento de las acequias.</p>
+  </section>
+
+  <section class="container" id="equipo">
+    <h2>El equipo</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Alan Argañaraz</h5>
+        <p>Encargado de la estructura visual del sitio y diseño del carrusel principal.</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Arian Chantire</h5>
+        <p>Presentador del proyecto y analista de datos.</p>
+      </div>
+    </div>
+    <p class="mt-4">Este proyecto representa un esfuerzo colaborativo de todo el equipo y sus compañeros de cursado, ya que la idea general como el nombre del proyecto nació gracias al esfuerzo de todos. Además, gracias a la orientación docente y la colaboración de instituciones gubernamentales, este proyecto puede contribuir con soluciones tecnológicas a este gran problema en la provincia de Mendoza.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 AcequIA | Proyecto educativo del IES 9-008 Manuel Belgrano</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener('scroll', () => {
+      const secciones = [document.getElementById('origen'), document.getElementById('equipo')];
+      const screenPos = window.innerHeight / 1.3;
+      secciones.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < screenPos) {
+          section.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
